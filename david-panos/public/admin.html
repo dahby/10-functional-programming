@@ -12,6 +12,13 @@
   <link rel="stylesheet" href="styles/modules.css">
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
   <!-- TODO: Setup a template for each row of the Author Stats section of this page: -->
+  <script id="row-template" type="text/x-handlebars-template">
+    <section id="blog-stats">
+          <li><em>{[currentAuthor}}</em>:{{currentWords}}</li>
+      <ul class="author-stats">
+      </ul>
+    </section>    
+  </script>
 </head>
 
 <body>
@@ -57,7 +64,8 @@
   <script>
     // TODO: After we fetch and load all the articles, what view function do we want to run next? 
     // Let's pass in a callback!
-    function, to determine what happens AFTER all articles are loaded.
+    Handlebars.compile($('#row-template').text());
+    // function, to determine what happens AFTER all articles are loaded.
     Article.fetchAll();
   </script>
 </body>
